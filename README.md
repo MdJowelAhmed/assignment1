@@ -4,7 +4,7 @@ In TypeScript, **`interface`** and **`type`** help us define the **shape of data
 
 ---
 
-### **🔹 Basic Structure Definition**
+### ** Basic Structure Definition**
 
 Both `interface` and `type` can be used to describe the shape of an object (like what properties it has):
 
@@ -20,3 +20,21 @@ type User = {
   name: string;
   age: number;
 }
+
+
+### ** Extending or Inheriting**
+
+You can create a new type based on an existing one. This is called extending or inheriting.
+
+// With interface
+interface Animal {
+  name: string;
+}
+interface Dog extends Animal {
+  breed: string;
+}
+
+// With type
+type Animal = { name: string };
+type Dog = Animal & { breed: string };
+
