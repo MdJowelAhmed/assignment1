@@ -75,5 +75,55 @@ function processValue(value:number | string):number{
     }
 }
 
-console.log(processValue("Hello")); 
-console.log(processValue(10));
+// console.log(processValue("Hello")); 
+// console.log(processValue(10));
+
+interface Product{
+    name:string;
+    price:number;
+}
+
+function getMostExpensiveProduct(products:Product[]):Product | null {
+    if (products.length === 0) {
+        return null;
+    }
+
+    let mostExpensive = products[0];
+    for(const product of products) {
+        if (product.price > mostExpensive.price) {
+            mostExpensive = product;
+        }
+    }
+    return mostExpensive;
+}
+
+// const productList: Product[] = [
+//     { name: "Laptop", price: 21000 },
+//     { name: "Phone", price: 1800 },
+//     { name: "Monitor", price: 12000 },
+//   ];
+  
+//   const result = getMostExpensiveProduct(productList);
+//   console.log(result); 
+  
+
+enum Day{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+}
+
+function getDayType(day : Day): string {
+  if (day === Day.Friday || day === Day.Saturday) {
+    return "Weekend";
+  }
+  return "Weekday";
+}
+
+console.log(getDayType(Day.Monday));    
+console.log(getDayType(Day.Saturday));  
+console.log(getDayType(Day.Sunday));    
