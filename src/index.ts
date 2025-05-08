@@ -1,4 +1,4 @@
-// problem 1 
+
 function formatString(str:string, toUpperCase:boolean=true): string{
     if (toUpperCase) {
         return str.toUpperCase();
@@ -8,30 +8,17 @@ function formatString(str:string, toUpperCase:boolean=true): string{
 }
 
 
-// console.log(formatString("Hello TypeScript"));       
-// console.log(formatString("Hello Java script", false));  
-// console.log(formatString("Hello mongoose", true)); 
-
 type item={title:string,rating:number}[];
 
 function filterByRating(books:item):item{
     return books.filter((book) => book.rating >= 4);
 }
-// const books = [
-//     { title: "Book 1", rating: 4.5 },
-//     { title: "Book 2", rating: 3.8 },
-//     { title: "Book 3", rating: 4.2 },
-//     { title: "Book 4", rating: 2.9 },
-// ];
-// console.log(filterByRating(books)); 
+
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return ([] as T[]).concat(...arrays);
   }
   
-// const numbers = concatenateArrays([1, 2], [3, 4], [5]);
-// console.log(numbers)
-
 
 class Vehicle{
     private make:string;
@@ -60,10 +47,6 @@ class Car extends Vehicle{
     }
 }
 
-// const myCar = new Car("Toyota", 2020, "Corolla");
-
-// console.log(myCar.getInfo());   
-// console.log(myCar.getModel());
 
 
 function processValue(value:number | string):number{
@@ -75,8 +58,7 @@ function processValue(value:number | string):number{
     }
 }
 
-// console.log(processValue("Hello")); 
-// console.log(processValue(10));
+
 
 interface Product{
     name:string;
@@ -97,14 +79,7 @@ function getMostExpensiveProduct(products:Product[]):Product | null {
     return mostExpensive;
 }
 
-// const productList: Product[] = [
-//     { name: "Laptop", price: 21000 },
-//     { name: "Phone", price: 1800 },
-//     { name: "Monitor", price: 12000 },
-//   ];
-  
-//   const result = getMostExpensiveProduct(productList);
-//   console.log(result); 
+
   
 
 enum Day{
@@ -124,9 +99,7 @@ function getDayType(day : Day): string {
   return "Weekday";
 }
 
-// console.log(getDayType(Day.Monday));    
-// console.log(getDayType(Day.Saturday));  
-// console.log(getDayType(Day.Sunday));    
+  
 
 
 async function squareAsync(n: number): Promise<number> {
@@ -142,8 +115,4 @@ async function squareAsync(n: number): Promise<number> {
   }
   
 
-// squareAsync(5)
-//     .then(result => console.log(result))
-
-    squareAsync(-15)
-    .then(result => console.log(result))    
+   
