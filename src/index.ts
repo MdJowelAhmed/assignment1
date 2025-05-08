@@ -124,6 +124,26 @@ function getDayType(day : Day): string {
   return "Weekday";
 }
 
-console.log(getDayType(Day.Monday));    
-console.log(getDayType(Day.Saturday));  
-console.log(getDayType(Day.Sunday));    
+// console.log(getDayType(Day.Monday));    
+// console.log(getDayType(Day.Saturday));  
+// console.log(getDayType(Day.Sunday));    
+
+
+async function squareAsync(n: number): Promise<number> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (n < 0) {
+          reject(new Error("Negative number not allowed"));
+        } else {
+          resolve(n * n);
+        }
+      }, 1000); 
+    });
+  }
+  
+
+// squareAsync(5)
+//     .then(result => console.log(result))
+
+    squareAsync(-15)
+    .then(result => console.log(result))    
